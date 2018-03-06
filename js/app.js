@@ -24,7 +24,7 @@ var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".
 // all the variations of yes/no
 
 if (myAge === 'yes') {
-  alert('Wow, alright I am close to 20, not 25. Rude.')
+  alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.')
 } else {
   alert('Alright! Good job guessing!');
 }
@@ -38,3 +38,5 @@ if (realName === true) {
 } else {
   alert('WaH wWwAhHhHh! Nope, it is a nickname for Rhiannon.')
 }
+console.log(userName + ' answered for the nickname question.');
+
