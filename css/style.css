@@ -7,12 +7,13 @@ head {
 }
 h1 {
   color: whitesmoke;
-  font-size: 75px
+  font-size: 65px
 }
 h2 {
 color: whitesmoke;
-font-size: 50px
+font-size: 45px
 }
 p {
-  
+  color: whitesmoke;
+  font-size: 25px;
 }
