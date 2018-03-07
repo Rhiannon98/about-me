@@ -94,6 +94,6 @@ alert('thank you for playing! your results are in the next pop-up, and in that p
 var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
 
 console.log(userResults);
-
+alert(userResults);
 
 
