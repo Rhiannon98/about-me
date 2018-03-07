@@ -3,4 +3,12 @@
   border: 1px dotted purple;
   color: whitesmoke;
 }
+nav
+h1 {
+  font-size: 50px;
+}
+nav {
+  font-size: 25px;
+  display: inline;
+}
 
