@@ -14,12 +14,14 @@ var score = 0;
 
 var openingAlert = alert('POP-UP QUIZ!!!! Well, guessing game but you will get the general idea');
 
+//question(q) 1
 var userName = prompt('What is your name?');
 
 var userHello = alert('Why hello there ' + userName +'. Hope you are ready for some guessing!');
 
 console.log(userHello);
 
+//q2
 var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
 
 console.log(userName + ' answered ' + petQuestion + ' to my pet amount.')
@@ -33,6 +35,7 @@ if (petQuestion === 2) {
 // FYI you can use an 'if' alllllll alone (without its 'else' partner)
 
 
+//q3
 var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".').toLocaleLowerCase();
 
 console.log(myAge + ' was guessed by '+ userName + ' for my age.');
@@ -45,8 +48,9 @@ if (myAge === 'yes') {
   alert('Alright! Good job guessing!');
 }
 
-var realName = prompt('Rhi. Is this a nickname? Please answer \'yes\' or \'no\'').toLocaleLowerCase();
 
+//q4
+var realName = prompt('Rhi. Is this a nickname? Please answer \'yes\' or \'no\'').toLocaleLowerCase();
 
 console.log(realName + ' was guessed by ' + userName + ' for my nickname.');
 
@@ -62,6 +66,8 @@ while (realName === null) {
 
 }
 
+
+//q5
 var homeStatus = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');
 
 console.log(userName + ' answered '+ homeStatus + ' for homeStatus.');
@@ -74,6 +80,8 @@ if (homeStatus === 1){
   alert('no, sorry. I live with ma,dad, and grampy.')
 }
 
+
+//q5
 var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').toLocaleLowerCase;
 
 var siblingGender = ['m', 'f'];
@@ -109,6 +117,8 @@ for (start ; condition ; increment) {
   code to execute;
 } */
 
+
+//q6
 var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
 
 console.log(favFood);
@@ -117,6 +127,8 @@ console.log(favFood.length);
 
 //TODO: 
 //FIX ME:
+
+//q7
 // for(var i = 0; i < favFood.length; i++) {
 //   if (faveFood === favFood[i] && i > 4) {
 //     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
@@ -137,7 +149,7 @@ console.log(favFood.length);
 */
 
 
-
+//end
 alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
 
 var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
