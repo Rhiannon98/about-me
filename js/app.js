@@ -33,7 +33,6 @@ if (petQuestion === 2) {
 // FYI you can use an 'if' alllllll alone (without its 'else' partner)
 
 
-
 var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".').toLocaleLowerCase();
 
 console.log(myAge + ' was guessed by '+ userName + ' for my age.');
@@ -45,14 +44,22 @@ if (myAge === 'yes') {
 } else {
   alert('Alright! Good job guessing!');
 }
-var realName = confirm('Rhi. Is this a nickname? \'Okay\' = \'yes\', \'cancel\' = \'no\'.');
+
+var realName = prompt('Rhi. Is this a nickname? Please answer \'yes\' or \'no\'').toLocaleLowerCase();
+
 
 console.log(realName + ' was guessed by ' + userName + ' for my nickname.');
 
-if (realName === true) {
-  alert('You are definitely right! My full name is Rhiannon.')
-} else {
-  alert('WaH wWwAhHhHh! Nope, it is a nickname for Rhiannon.')
+while (realName === null) {
+
+  if (realName === 'yes') {
+   alert('You are definitely right! My full name is Rhiannon.')
+    break;
+
+  } else {
+   alert('WaH wWwAhHhHh! Nope, try again')
+  }
+
 }
 
 var homeStatus = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');

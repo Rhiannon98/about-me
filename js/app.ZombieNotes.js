@@ -16,7 +16,13 @@
 //  FIXME: what needs to be fixed
 /* commented out code goes here */
 //  TODO: what needs to be fixed, listing
+
+
+
 var score = 0;
+
+
+//MARCH 6 2018
 
 var openingAlert = alert('POP-UP QUIZ!!!! Well, guessing game but you will get the general idea');
 
@@ -96,6 +102,8 @@ if (homeStatus[i] ==='1') {
   score--;
 }
 
+//TODO:
+//FIXME: -> ONLY GIVES USER ANSWER = WRONG PROMPT
 //questions 5 
 var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').toLocaleLowerCase();
 
@@ -132,34 +140,36 @@ if (siblingNum === 'yes') {
   }
 }
 
+//MARCH 7 2018
+
 /* PSEUDO CODE:
 for (start ; condition ; increment) {
   code to execute;
 } */
 
-var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'].toLocaleLowerCase();
+// var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'].toLocaleLowerCase();
 
-console.log(favFood);
+// console.log(favFood);
 
-for(var i = 0; i < favFood.length; i++) {
-  if (faveFood === favFood[i] && i > 4) {
-    alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
-    score+=2;
+// for(var i = 0; i < favFood.length; i++) {
+//   if (faveFood === favFood[i] && i > 4) {
+//     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
+//     score+=2;
     
-  } else if(faveFood === favFood[i]) {
-    alert('good job! ' + favFood + ' is one of my favorite foods.');
-    score ++;
-  } else {
-    alert('try again');
-  }
+//   } else if(faveFood === favFood[i]) {
+//     alert('good job! ' + favFood + ' is one of my favorite foods.');
+//     score ++;
+//   } else {
+//     alert('try again');
+//   }
 
-  /* if answer === favFood[i].toLocaleLowerCase(); {
-    loiuyktfgjhgvbj
-  } else {
-    oiukgyfhjvcb 
-  }*/
+//   /* if answer === favFood[i].toLocaleLowerCase(); {
+//     loiuyktfgjhgvbj
+//   } else {
+//     oiukgyfhjvcb 
+//   }*/
 
-}
+// }
 
 
 //final alerts
@@ -173,3 +183,48 @@ var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' +
 
 console.log(userResults);
 alert(userResults);
+
+
+
+// //MARCH 8, 2018
+// //screen recording 11.31am
+
+// checked code in repl.it
+
+// function getArea(width , height) {
+//   return width * height;
+// }
+
+// console.log(getArea);
+
+
+// function greeting(name) {
+//   console.log('Hello ' + name + '!');
+// }
+
+// greeting('Name');
+
+
+
+// function varScope() {
+//   var dog = 'Charlotte';
+//   console.log('inside function '+ dog);
+// }
+
+// varScope();
+// console.log('outside function '+ dog);
+
+
+
+// function secondScope(dogParam) {
+//   dogParam = 'Gary';
+//   console.log('inside', dogParam)
+// }
+
+// var dog = 'Charlotte';
+
+// console.log('outside', dog);
+// secondScope(dog);
+// console.log('outside 2', dog)
+// console.log('dog Param outside', dogParam);
+

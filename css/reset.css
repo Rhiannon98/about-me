@@ -60,7 +60,7 @@
 
 	bottom: auto;
 	box-shadow: none;
-	box-sizing: content-box;
+	box-sizing: border-box;
 
 	caption-side: top;
 
@@ -212,4 +212,3 @@
 	}
 
 
-	
