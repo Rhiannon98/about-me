@@ -9,6 +9,8 @@
 } else {
   do a possible third thing
 }*/
+var score = 0;
+
 
 var openingAlert = alert('POP-UP QUIZ!!!! Well, guessing game but you will get the general idea');
 
@@ -64,9 +66,10 @@ if (homeStatus === 1){
 
 var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').toLocaleLowerCase;
 
-var siblingGender;
+var siblingGender = ['m', 'f'];
 
 console.log(userName + ' answered '+ siblingNum+ ' for if I have siblings or not.');
+
 
 if (siblingNum === 'yes') {
   alert('correct! I have one sibling :) .');
@@ -95,29 +98,32 @@ for (start ; condition ; increment) {
   code to execute;
 } */
 
-var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'].toLocaleLowerCase();
+var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
 
 console.log(favFood);
+console.log(favFood.length);
 
-for(var i = 0; i < favFood.length; i++) {
-  if (faveFood === favFood[i] && i > 4) {
-    alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
-    score+=2;
+//FIX ME:
+// for(var i = 0; i < favFood.length; i++) {
+//   if (faveFood === favFood[i] && i > 4) {
+//     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
+//     score+=2;
     
-  } else if(faveFood === favFood[i]) {
-    alert('good job! ' + favFood + ' is one of my favorite foods.');
-    score ++;
-  } else {
-    alert('try again');
-  }
+//   } else if(faveFood === favFood[i]) {
+//     alert('good job! ' + favFood + ' is one of my favorite foods.');
+//     score ++;
+//   } else {
+//     alert('try again');
+//   }
 
   /* if answer === favFood[i].toLocaleLowerCase(); {
     loiuyktfgjhgvbj
   } else {
     oiukgyfhjvcb 
-  }*/
+  }
+*/
 
-}
+
 
 alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
 

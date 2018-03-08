@@ -75,7 +75,7 @@ if (realName === true) {
 }
 
 //questions 4 
-var homeStatusPrompt = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\''));
+var homeStatusPrompt = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');
 var homeStatus = ['1', '2', '3'];
 
 console.log(userName + ' answered '+ homeStatus + ' for homeStatus.');
