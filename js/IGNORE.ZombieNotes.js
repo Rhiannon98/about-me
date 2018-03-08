@@ -186,33 +186,33 @@ alert(userResults);
 
 
 
-// //MARCH 8, 2018
-// //screen recording 11.31am
+//MARCH 8, 2018
+//screen recording 11.31am
 
-// checked code in repl.it
+//checked code in repl.it
 
-// function getArea(width , height) {
-//   return width * height;
-// }
+function getArea(width , height) {
+  return width * height;
+}
 
-// console.log(getArea);
-
-
-// function greeting(name) {
-//   console.log('Hello ' + name + '!');
-// }
-
-// greeting('Name');
+console.log(getArea);
 
 
+function greeting(name) {
+  console.log('Hello ' + name + '!');
+}
 
-// function varScope() {
-//   var dog = 'Charlotte';
-//   console.log('inside function '+ dog);
-// }
+greeting('Name');
 
-// varScope();
-// console.log('outside function '+ dog);
+
+
+function varScope() {
+  var dog = 'Charlotte';
+  console.log('inside function '+ dog);
+}
+
+varScope();
+console.log('outside function '+ dog);
 
 
 
