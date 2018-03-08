@@ -25,10 +25,12 @@ var userName = prompt('What is your name?');
 //first concatination
 var userHello = alert('Why hello there ' + userName +'. Hope you are ready for some guessing!');
 
-if (userName === 'string') {
-  console.log(userHello);
-  score++;
-}
+//TODO: if user gives string (name) then give point with hello
+
+// if (userName === 'string') {
+//   console.log(userHello);
+//   score++;
+// }
 
 
 //question 1
@@ -52,7 +54,7 @@ console.log(myAge + ' was guessed by '+ userName + ' for my age.');
 //option, state all the variations of yes/no
 //question 2 responses
 if (myAge === 'yes') {
-  alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.')
+  alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.');
 } else {
   alert('Alright! Good job guessing!');
   score++;
@@ -73,19 +75,24 @@ if (realName === true) {
 }
 
 //questions 4 
-var homeStatus = parseInt(prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\''));
+var homeStatusPrompt = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\''));
+var homeStatus = ['1', '2', '3'];
 
 console.log(userName + ' answered '+ homeStatus + ' for homeStatus.');
 
 //questions 4 responses
-if (homeStatus === 1) {
+for(var i = 0; i < homeStatus.length; i++);
+if (homeStatus[i] ==='1') {
   alert('You are kinda right.');
-  score+=0.5;
-} else if(homeStatus === 2){
+  score+=(0.5);
+  break;
+} else if(homeStatus[i] === '2'){
   alert('Hoorah! You got it!');
-  score++;
+  score++; 
+  break;
+
 } else {
-  alert('no, sorry. I live with ma,dad, and grampy.')
+  alert('no, sorry. I live with ma,dad, and grampy.');
   score--;
 }
 
@@ -97,12 +104,14 @@ var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').
 var siblingGender;
 
 console.log(userName + ' answered '+ siblingNum+ ' for if I have siblings or not.');
+
 //question 5 responses
 if (siblingNum === 'yes') {
   alert('correct! I have one sibling :) .');
   score++;
+  
   //siblingGender being used below
- var siblingGender = prompt('are they male or female? please type \"m\" or \"f\" .').toLocaleLowerCase();
+  var siblingGender = prompt('are they male or female? please type \"m\" or \"f\" .').toLocaleLowerCase();
 
   if (siblingGender === 'f') {
     alert('Wow! '+ userName + ' is on a roll now!');
@@ -113,6 +122,8 @@ if (siblingNum === 'yes') {
 
 } else {
   alert('BWEHHHHHH, wrong. I have at least one sibling!');
+
+  var siblingGender = prompt('are they male or female? please type \"m\" or \"f\" .').toLocaleLowerCase();
 
   if (siblingGender === 'f') {
     alert('Wow! '+ userName + ' is got that right!');
@@ -131,10 +142,15 @@ var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food',
 console.log(favFood);
 
 for(var i = 0; i < favFood.length; i++) {
-  if (ffaveFood === favFood[i] && i > 4) {
+  if (faveFood === favFood[i] && i > 4) {
     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
-  } else if(faveFood === favFood[i] && i > 4) {
-    alert
+    score+=2;
+    
+  } else if(faveFood === favFood[i]) {
+    alert('good job! ' + favFood + ' is one of my favorite foods.');
+    score ++;
+  } else {
+    alert('try again');
   }
 
   /* if answer === favFood[i].toLocaleLowerCase(); {
