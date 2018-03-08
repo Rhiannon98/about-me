@@ -73,7 +73,7 @@ if (realName === true) {
 }
 
 //questions 4 
-var homeStatus = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');
+var homeStatus = parseInt(prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\''));
 
 console.log(userName + ' answered '+ homeStatus + ' for homeStatus.');
 
@@ -97,7 +97,6 @@ var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').
 var siblingGender;
 
 console.log(userName + ' answered '+ siblingNum+ ' for if I have siblings or not.');
-
 //question 5 responses
 if (siblingNum === 'yes') {
   alert('correct! I have one sibling :) .');
@@ -127,14 +126,16 @@ for (start ; condition ; increment) {
   code to execute;
 } */
 
-var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
+var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'].toLocaleLowerCase();
 
 console.log(favFood);
 
 for(var i = 0; i < favFood.length; i++) {
-  if (faveFood === favFood[i].toLocaleLowerCase()) {
-    alert('HOLY COW!! You actually guessed that correctly!')
-  } else if(faveFood === favFood[])
+  if (ffaveFood === favFood[i] && i > 4) {
+    alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
+  } else if(faveFood === favFood[i] && i > 4) {
+    alert
+  }
 
   /* if answer === favFood[i].toLocaleLowerCase(); {
     loiuyktfgjhgvbj
