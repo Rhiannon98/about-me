@@ -1,14 +1,14 @@
 'use strict';
 
 //If/Else
-//psuedocode
+//PSEUDOCODE:
 /* if (some condition met) {
   do this
-} else if {
-  do something different
-} else {
-  do a possible third thing
-}*/
+    } else if {
+    do something different
+    } else {
+    do a possible third thing
+  }*/
 var score = 0;
 
 
@@ -30,6 +30,9 @@ if (petQuestion === 2) {
 } else {
   alert('nope, sorry. I have 2 pets');
 }
+// FYI you can use an 'if' alllllll alone (without its 'else' partner)
+
+
 
 var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".').toLocaleLowerCase();
 
@@ -92,6 +95,7 @@ if (siblingNum === 'yes') {
   }
 }
 
+// var  !== #   <-- still === just saying that its anything but 1
 
 /* PSEUDO CODE:
 for (start ; condition ; increment) {
@@ -103,6 +107,8 @@ var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food',
 console.log(favFood);
 console.log(favFood.length);
 
+
+//TODO: 
 //FIX ME:
 // for(var i = 0; i < favFood.length; i++) {
 //   if (faveFood === favFood[i] && i > 4) {
@@ -128,6 +134,8 @@ console.log(favFood.length);
 alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
 
 var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
+
+
 
 console.log(userResults);
 alert(userResults);
