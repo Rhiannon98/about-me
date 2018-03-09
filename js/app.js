@@ -1,6 +1,7 @@
 'use strict';
 
-//If/Else
+
+// If/Else
 //PSEUDOCODE:
 /* if (some condition met) {
   do this
@@ -10,105 +11,105 @@
     do a possible third thing
   }*/
 var score = 0;
-
-
-var openingAlert = alert('POP-UP QUIZ!!!! Well, guessing game but you will get the general idea');
+alert('POP-UP QUIZ!!!! Well, guessing game but you will get the general idea');
 
 //question(q) 1
 var userName = prompt('What is your name?');
 
-var userHello = alert('Why hello there ' + userName +'. Hope you are ready for some guessing!');
-
-console.log(userHello);
+function hi(){
+  var userHello = alert('Why hello there ' + userName +'. Hope you are ready for some guessing!');
+  console.log(userHello);
+}
+hi();
 
 //q2
-var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
+function petQuest(){
+  var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
+  console.log(userName + ' answered ' + petQuestion + ' to my pet amount.');
 
-console.log(userName + ' answered ' + petQuestion + ' to my pet amount.')
-
-
-if (petQuestion === 2) {
-  alert('correct!');
-} else {
-  alert('nope, sorry. I have 2 pets');
+  if (petQuestion === 2) {
+    alert('correct!');
+    score++;
+  } else {
+    alert('nope, sorry. I have 2 pets');
+  } petQuest();
 }
+petQuest();
+
 // FYI you can use an 'if' alllllll alone (without its 'else' partner)
 
 
 //q3
-var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".').toLocaleLowerCase();
+function ageQuest(){
+  var myAge = prompt('Do you think I am older than 25? Please enter "yes" or "no".').toLocaleLowerCase();
+  console.log(myAge + ' was guessed by '+ userName + ' for my age.');
 
-console.log(myAge + ' was guessed by '+ userName + ' for my age.');
+  // all the variations of yes/no
 
-// all the variations of yes/no
-
-if (myAge === 'yes') {
-  alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.')
-} else {
-  alert('Alright! Good job guessing!');
+  if (myAge === 'yes') {
+    alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.');
+    score++;
+  } else {
+    alert('Alright! Good job guessing!');
+  }
 }
-
+ageQuest();
 
 //q4
-var realName = prompt('Rhi. Is this a nickname? Please answer \'yes\' or \'no\'').toLocaleLowerCase();
+function nameQuest(){
+  var correct = true;
 
-console.log(realName + ' was guessed by ' + userName + ' for my nickname.');
+  while (correct === true) {
+    var realName = prompt('Rhi. Is this a nickname? Please answer \'yes\' or \'no\'').toLocaleLowerCase();
+    console.log(realName + ' was guessed by ' + userName + ' for my nickname.');
 
-while (realName === null) {
+    if (realName === 'yes') {
+      alert('You are definitely right! My full name is Rhiannon.');
+      score++;
+      correct === false;
+      break;
 
-  if (realName === 'yes') {
-   alert('You are definitely right! My full name is Rhiannon.')
-    break;
-
-  } else {
-   alert('WaH wWwAhHhHh! Nope, try again')
-  }
-
-}
-
-
-//q5
-var homeStatus = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');
-
-console.log(userName + ' answered '+ homeStatus + ' for homeStatus.');
-
-if (homeStatus === 1){
-  alert('You are kinda right.');
-} else if(homeStatus === 2){
-  alert('Hoorah! You got it!');
-} else {
-  alert('no, sorry. I live with ma,dad, and grampy.')
-}
-
-
-//q5
-var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').toLocaleLowerCase;
-
-var siblingGender = ['m', 'f'];
-
-console.log(userName + ' answered '+ siblingNum+ ' for if I have siblings or not.');
-
-
-if (siblingNum === 'yes') {
-  alert('correct! I have one sibling :) .');
-
- var siblingGender = prompt('are they male or female? please type \"m\" or \"f\" .').toLocaleLowerCase;
-
-  if (siblingGender === 'm'){
-    alert('Wow! '+ userName + ' is on a roll now!');
-  } else {
-    alert('I have a sister, but that\'s okay. I know that guessing sibling gender can be hard.');
-
-  }  
-} else {
-  alert('BWEHHHHHH, wrong. I have at least one sibling!');
-
-  if (siblingGender === 'm'){
-    alert('Wow! '+ userName + ' is got that right!');
-  } else {
-    alert('I have a sister, but that\'s okay. I know that guessing sibling gender can be hard.');
+    } else {
+      alert('WaH wWwAhHhHh! Nope, try again');
+    }
   }
 }
+nameQuest();
+
+//q5
+var sibScore = 0;
+function sibQuest(){
+
+  while(sibScore === 0) {
+    var question = prompt('y or n, do i have siblings? please answer.');
+
+    if(question === 'y') {
+      console.log('Correct!');
+      sibScore++;
+    } else {
+      console.log('incorrect, try again');
+    }
+  }
+}
+sibQuest();
+
+function sibQuest2(){
+  while(sibScore === 1) {
+    var question = prompt('are they male or female? please type "m" or "f" .');
+
+    if(question === 'f') {
+      console.log('Correct! I have a sister.');
+      sibScore++;
+    } else {
+      console.log('incorrect, try again');
+    }
+  }
+}
+sibQuest2();
+score = score + sibScore;
+console.log('total score is ' + score + ' currently.');
+
+
 
 // var  !== #   <-- still === just saying that its anything but 1
 
@@ -118,47 +119,45 @@ for (start ; condition ; increment) {
 } */
 
 
-//q6
+// //q6
 var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
+// console.log(favFood);
+// console.log(favFood.length);
 
-console.log(favFood);
-console.log(favFood.length);
 
-
-//TODO: 
-//FIX ME:
+// //TODO:
+// //FIX ME:
 
 //q7
-// for(var i = 0; i < favFood.length; i++) {
-//   if (faveFood === favFood[i] && i > 4) {
-//     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
-//     score+=2;
-    
-//   } else if(faveFood === favFood[i]) {
-//     alert('good job! ' + favFood + ' is one of my favorite foods.');
-//     score ++;
-//   } else {
-//     alert('try again');
-//   }
-
-  /* if answer === favFood[i].toLocaleLowerCase(); {
-    loiuyktfgjhgvbj
+for(var i = 0; i < favFood.length; i++) {
+  var foodAnswer = prompt('what is my fav food?').toLowerCase;
+  if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
+    alert('HOLY COW!! You are so lazy, and have no idea what on earth you');
+    score+=2;
+    break;
+  } else if(foodAnswer === favFood[i]) {
+    alert('good job! ' + favFood + ' is one of my favorite foods.');
+    score ++;
+    break;
   } else {
-    oiukgyfhjvcb 
+    alert('try again');
   }
-*/
+}
 
-
-//end
-alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
-
-var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
-
-
-
-console.log(userResults);
-alert(userResults);
+// if answer === favFood[i].toLocaleLowerCase(); {
+//   loiuyktfgjhgvbj
+// } else {
+//   oiukgyfhjvcb
+// }
 
 
 
+// //end
+// alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
 
+// var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
+
+
+
+// console.log(userResults);
+// alert(userResults);
