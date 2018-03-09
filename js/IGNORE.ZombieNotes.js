@@ -80,7 +80,7 @@ if (realName === true) {
   score--;
 }
 
-//questions 4 
+//questions 4
 var homeStatusPrompt = prompt('who do you think I live with? 1) mom and dad, 2) mom, dad and grandpa, 3) alone? Answer\' 1\', \'2\', or \'3\'');
 var homeStatus = ['1', '2', '3'];
 
@@ -91,11 +91,9 @@ for(var i = 0; i < homeStatus.length; i++);
 if (homeStatus[i] ==='1') {
   alert('You are kinda right.');
   score+=(0.5);
-  break;
 } else if(homeStatus[i] === '2'){
   alert('Hoorah! You got it!');
-  score++; 
-  break;
+  score++;
 
 } else {
   alert('no, sorry. I live with ma,dad, and grampy.');
@@ -104,7 +102,7 @@ if (homeStatus[i] ==='1') {
 
 //TODO:
 //FIXME: -> ONLY GIVES USER ANSWER = WRONG PROMPT
-//questions 5 
+//questions 5
 var siblingNum = prompt('do i have siblings? please answer \"yes\" or \"no\".').toLocaleLowerCase();
 
 
@@ -117,7 +115,7 @@ console.log(userName + ' answered '+ siblingNum+ ' for if I have siblings or not
 if (siblingNum === 'yes') {
   alert('correct! I have one sibling :) .');
   score++;
-  
+
   //siblingGender being used below
   var siblingGender = prompt('are they male or female? please type \"m\" or \"f\" .').toLocaleLowerCase();
 
@@ -126,7 +124,7 @@ if (siblingNum === 'yes') {
     score++;
   } else {
     alert('I have a sister, but that\'s okay. I know that guessing sibling gender can be hard.');
-  }  
+  }
 
 } else {
   alert('BWEHHHHHH, wrong. I have at least one sibling!');
@@ -155,7 +153,7 @@ for (start ; condition ; increment) {
 //   if (faveFood === favFood[i] && i > 4) {
 //     alert('HOLY COW!! You are so lazy, and have no idea what on earth you')
 //     score+=2;
-    
+
 //   } else if(faveFood === favFood[i]) {
 //     alert('good job! ' + favFood + ' is one of my favorite foods.');
 //     score ++;
@@ -166,7 +164,7 @@ for (start ; condition ; increment) {
 //   /* if answer === favFood[i].toLocaleLowerCase(); {
 //     loiuyktfgjhgvbj
 //   } else {
-//     oiukgyfhjvcb 
+//     oiukgyfhjvcb
 //   }*/
 
 // }
