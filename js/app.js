@@ -121,7 +121,7 @@ for (start ; condition ; increment) {
 
 
 // //q6
-var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
+var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullcrap', 'tacos'];
 var foodAnswer = prompt('what one of my favorite foods?').toLocaleLowerCase();
 console.log(userName + ' answered ' + foodAnswer + ' for favFood.');
 

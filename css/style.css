@@ -1,8 +1,11 @@
 * {
-  background-color: rgb(119, 57, 119);
-  border: 1px dotted purple;
+  background-color: rgb(61, 21, 61);
+  border: 1px dotted #e4dee4;
   color: whitesmoke;
-  padding: 10px;
+
+}
+.home {
+  float: center;
 }
 
 h1 {
@@ -25,3 +28,5 @@ h4 {
 img {
   width: 750px;
 }
+
+
