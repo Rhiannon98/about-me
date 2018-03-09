@@ -31,8 +31,8 @@ function petQuest(){
     alert('correct!');
     score++;
   } else {
-    alert('nope, sorry. I have 2 pets');
-  } petQuest();
+    alert('nope, sorry. Please, try again.');
+  }
 }
 petQuest();
 
@@ -108,6 +108,7 @@ function sibQuest2(){
 sibQuest2();
 score = score + sibScore;
 console.log('total score is ' + score + ' currently.');
+alert('you are doing fine! '+ 'total score is ' + score + ' currently.');
 
 
 
@@ -121,42 +122,38 @@ for (start ; condition ; increment) {
 
 // //q6
 var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullshit'];
-// console.log(favFood);
-// console.log(favFood.length);
+var foodAnswer = prompt('what one of my favorite foods?').toLocaleLowerCase();
+console.log(userName + ' answered ' + foodAnswer + ' for favFood.');
 
+function foodQuest () {
 
-// //TODO:
-// //FIX ME:
-
-//q7
-for(var i = 0; i < favFood.length; i++) {
-  var foodAnswer = prompt('what is my fav food?').toLowerCase;
-  if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
-    alert('HOLY COW!! You are so lazy, and have no idea what on earth you');
-    score+=2;
-    break;
-  } else if(foodAnswer === favFood[i]) {
-    alert('good job! ' + favFood + ' is one of my favorite foods.');
-    score ++;
-    break;
-  } else {
-    alert('try again');
+  for(var i = 0; i < favFood.length; i++) {
+    if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
+      alert('HOLY COW!! You are so lazy, and have no idea what on earth you');
+      score+=2;
+      break;
+    } else if(foodAnswer === favFood[i]) {
+      alert('good job! ' + favFood + ' is one of my favorite foods.');
+      score ++;
+      break;
+    } else {
+      alert('try again');
+    }
   }
 }
+foodQuest();
+
 
 // if answer === favFood[i].toLocaleLowerCase(); {
-//   loiuyktfgjhgvbj
+//   ex.exe
 // } else {
-//   oiukgyfhjvcb
+//   ex.exe
 // }
 
 
 
 // //end
 // alert('thank you for playing! your results are in the next pop-up, and in that pop-up some of the answers, again.');
-
-// var userResults = alert(userName +', you got' + petQuestion +',I have 2 pets!' + myAge + ', is what you guessed for my approximate age.' + realName + ' is ' + userName + '\'s answer to the nickname question.' + 'you answered '+ homeStatus + ' for who I lived with. I live with my mom, dad, and grandpa.' + userName + ' guessed '+ siblingNum + 'for if I have siblings. Which I do, a sister.' );
-
 
 
 // console.log(userResults);
