@@ -142,14 +142,24 @@ function foodQuest () {
     }
   }
 }
-function foodQuest(); {
+foodQuest();
 
-var travelQuest = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhose island'];
-console.log(travelQuest);
+var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
+console.log(travelArray);
 
-if 
+var travelAnswer = prompt('QUICK! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
+
+
+function travelQuest() {
+
+  if travelAnswer === travelArray[i].toLocaleLowerCase() {
+    
+    console.log(travelAnswer);
+  }
 
 }
+
+travelQuest();
 // if answer === favFood[i].toLocaleLowerCase(); {
 //   ex.exe
 // } else {
