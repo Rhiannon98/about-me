@@ -106,6 +106,7 @@ function sibQuest2(){
   }
 }
 sibQuest2();
+
 score = score + sibScore;
 console.log('total score is ' + score + ' currently.');
 alert('you are doing fine! '+ 'total score is ' + score + ' currently.');
@@ -129,7 +130,7 @@ function foodQuest () {
 
   for(var i = 0; i < favFood.length; i++) {
     if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
-      alert('HOLY COW!! You are so lazy, and have no idea what on earth you');
+      alert('HOLY COW!! You are so lazy, and I have no idea how on earth you knew that would be an answer somehow...');
       score+=2;
       break;
     } else if(foodAnswer === favFood[i]) {
@@ -141,9 +142,14 @@ function foodQuest () {
     }
   }
 }
-foodQuest();
+function foodQuest(); {
 
+var travelQuest = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhose island'];
+console.log(travelQuest);
 
+if 
+
+}
 // if answer === favFood[i].toLocaleLowerCase(); {
 //   ex.exe
 // } else {
