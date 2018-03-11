@@ -126,40 +126,52 @@ var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food',
 var foodAnswer = prompt('what one of my favorite foods?').toLocaleLowerCase();
 console.log(userName + ' answered ' + foodAnswer + ' for favFood.');
 
-function foodQuest () {
 
-  for(var i = 0; i < favFood.length; i++) {
-    if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
-      alert('HOLY COW!! You are so lazy, and I have no idea how on earth you knew that would be an answer somehow...');
-      score+=2;
-      break;
-    } else if(foodAnswer === favFood[i]) {
-      alert('good job! ' + favFood + ' is one of my favorite foods.');
-      score ++;
-      break;
-    } else {
-      alert('try again');
+function foodQuest() {
+  var foodScore = true;
+
+  while (foodScore === true) {
+
+    for (var i = 0; i < favFood.length; i++) {
+      if (foodAnswer === favFood[i]) {
+        alert('good job! ' + favFood + ' is one of my favorite foods.');
+        score++;
+        foodScore = false;
+
+      } if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
+        alert('HOLY COW!! You are so lazy, and I have no idea how on earth you knew that would be an answer somehow...');
+        score += 2;
+        foodScore = false;
+
+      } else {
+        alert('try again.');
+      }
     }
   }
 }
 foodQuest();
 
-var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
-console.log(travelArray);
 
-var travelAnswer = prompt('QUICK! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
+// var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
+// console.log(travelArray);
+
+// var travelAnswer = prompt('QUICK! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
 
 
-function travelQuest() {
+// function travelQuest() {
 
-  if travelAnswer === travelArray[i].toLocaleLowerCase() {
-    
-    console.log(travelAnswer);
-  }
+//   if travelAnswer === travelArray[i].toLocaleLowerCase() {
 
-}
+//     console.log(travelAnswer);
+//   }
 
-travelQuest();
+// }
+
+// travelQuest();
+
+
+
+
 // if answer === favFood[i].toLocaleLowerCase(); {
 //   ex.exe
 // } else {
@@ -173,4 +185,9 @@ travelQuest();
 
 
 // console.log(userResults);
-// alert(userResults);
+/* alert userResults */
+
+alert('thank you for playing! Your final score is ' + score + '.');
+
+
+
