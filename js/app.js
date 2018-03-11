@@ -132,7 +132,7 @@ for (start ; condition ; increment) {
 
 // //q6
 var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food', 'bullcrap', 'tacos'];
-var foodAnswer = prompt('what one of my favorite foods?').toLocaleLowerCase();
+var foodAnswer = prompt('what is one of my favorite foods?').toLocaleLowerCase();
 console.log(userName + ' answered ' + foodAnswer + ' for favFood.');
 
 
@@ -161,22 +161,34 @@ function foodQuest() {
 foodQuest();
 
 
-// var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
-// console.log(travelArray);
+var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
 
-// var travelAnswer = prompt('QUICK! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
+var travelAnswer = prompt('BONUS! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
 
 
-// function travelQuest() {
+function travelQuest() {
 
-//   if travelAnswer === travelArray[i].toLocaleLowerCase() {
+  var xTries = 0;
 
-//     console.log(travelAnswer);
-//   }
+  while (xTries < 11); {
+    for (var i = 0; i < travelArray.length; i++) {
+      if (travelAnswer === travelArray[i].toLocaleLowerCase()) {
+        alert('congrats!' + travelAnswer + ' is one of the many place I have been!');
+        alert('I have been to: ' + travelArray);
+        console.log(travelAnswer);
+        score++;
+        xTries += 100;
+        return [travelArray, travelAnswer];
 
-// }
-
-// travelQuest();
+      } else {
+        alert('I am sorry, you might want to guess again.');
+        alert('You have tried ' + xTries + ' amount of times of 10.');
+        xTries++;
+      }
+    }
+  }
+}
+travelQuest();
 
 
 
@@ -196,7 +208,7 @@ foodQuest();
 // console.log(userResults);
 /* alert userResults */
 
-alert('thank you for playing! Your final score is ' + score + '.');
+alert('thank you for playing,' + userName + '!' + 'Your final score is ' + score + '.');
 
 
 
