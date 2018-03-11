@@ -22,19 +22,6 @@ function hi(){
 }
 hi();
 
-//q2
-function petQuest(){
-  var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
-  console.log(userName + ' answered ' + petQuestion + ' to my pet amount.');
-
-  if (petQuestion === 2) {
-    alert('correct!');
-    score++;
-  } else {
-    alert('nope, sorry. Please, try again.');
-  }
-}
-petQuest();
 
 // FYI you can use an 'if' alllllll alone (without its 'else' partner)
 
@@ -49,6 +36,7 @@ function ageQuest(){
   if (myAge === 'yes') {
     alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.');
     score++;
+
   } else {
     alert('Alright! Good job guessing!');
   }
@@ -66,7 +54,7 @@ function nameQuest(){
     if (realName === 'yes') {
       alert('You are definitely right! My full name is Rhiannon.');
       score++;
-      correct === false;
+      correct = false;
       break;
 
     } else {
@@ -111,7 +99,28 @@ score = score + sibScore;
 console.log('total score is ' + score + ' currently.');
 alert('you are doing fine! '+ 'total score is ' + score + ' currently.');
 
+//q2
+function petQuest() {
 
+  var petStatus = true;
+
+  while (petStatus === true); {
+    var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
+
+    console.log(userName + ' answered ' + petQuestion + ' to my pet amount.');
+
+    if (petQuestion === 2) {
+      alert('correct!');
+      score++;
+      petStatus = false;
+
+    } else {
+      alert('nope, sorry. Please, try again.');
+      console.log(userName + ' is trying again.');
+    }
+  }
+}
+petQuest();
 
 // var  !== #   <-- still === just saying that its anything but 1
 
