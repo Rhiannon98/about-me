@@ -22,19 +22,6 @@ function hi(){
 }
 hi();
 
-//q2
-function petQuest(){
-  var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
-  console.log(userName + ' answered ' + petQuestion + ' to my pet amount.');
-
-  if (petQuestion === 2) {
-    alert('correct!');
-    score++;
-  } else {
-    alert('nope, sorry. Please, try again.');
-  }
-}
-petQuest();
 
 // FYI you can use an 'if' alllllll alone (without its 'else' partner)
 
@@ -49,6 +36,7 @@ function ageQuest(){
   if (myAge === 'yes') {
     alert('Wow, alright I am close to 20, not over 25 yet though. I do not know if I should be insulted or complimented.');
     score++;
+
   } else {
     alert('Alright! Good job guessing!');
   }
@@ -66,7 +54,7 @@ function nameQuest(){
     if (realName === 'yes') {
       alert('You are definitely right! My full name is Rhiannon.');
       score++;
-      correct === false;
+      correct = false;
       break;
 
     } else {
@@ -106,11 +94,33 @@ function sibQuest2(){
   }
 }
 sibQuest2();
+
 score = score + sibScore;
 console.log('total score is ' + score + ' currently.');
 alert('you are doing fine! '+ 'total score is ' + score + ' currently.');
 
+//q2
+function petQuest() {
 
+  var petStatus = true;
+
+  while (petStatus === true); {
+    var petQuestion = parseInt(prompt('How many pets do you think I have? Please enter a number.'));
+
+    console.log(userName + ' answered ' + petQuestion + ' to my pet amount.');
+
+    if (petQuestion === 2) {
+      alert('correct!');
+      score++;
+      petStatus = false;
+
+    } else {
+      alert('nope, sorry. Please, try again.');
+      console.log(userName + ' is trying again.');
+    }
+  }
+}
+petQuest();
 
 // var  !== #   <-- still === just saying that its anything but 1
 
@@ -125,23 +135,50 @@ var favFood = ['sushi', 'spaghetti', 'popcorn', 'soup', 'homemade food', 'food',
 var foodAnswer = prompt('what one of my favorite foods?').toLocaleLowerCase();
 console.log(userName + ' answered ' + foodAnswer + ' for favFood.');
 
-function foodQuest () {
 
-  for(var i = 0; i < favFood.length; i++) {
-    if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
-      alert('HOLY COW!! You are so lazy, and have no idea what on earth you');
-      score+=2;
-      break;
-    } else if(foodAnswer === favFood[i]) {
-      alert('good job! ' + favFood + ' is one of my favorite foods.');
-      score ++;
-      break;
-    } else {
-      alert('try again');
+function foodQuest() {
+  var foodScore = true;
+
+  while (foodScore === true) {
+
+    for (var i = 0; i < favFood.length; i++) {
+      if (foodAnswer === favFood[i]) {
+        alert('good job! ' + favFood + ' is one of my favorite foods.');
+        score++;
+        foodScore = false;
+
+      } if (foodAnswer === favFood[5] || foodAnswer === favFood[6]) {
+        alert('HOLY COW!! You are so lazy, and I have no idea how on earth you knew that would be an answer somehow...');
+        score += 2;
+        foodScore = false;
+
+      } else {
+        alert('try again.');
+      }
     }
   }
 }
 foodQuest();
+
+
+// var travelArray = ['washington', 'wisconsin', 'idaho', 'new mexico','montana', 'new hampshire', 'new york', 'pensilvania', 'califoria', 'texas', 'arizona', 'utah', 'south dakota', 'oklahoma', 'ohio', 'indiana','maryland', 'delaware', 'illinois', 'oregon', 'colorado', 'british coloumbia', 'wyoming', 'arkansas','tennesee', 'kentucky', 'nevada', 'new jersey', 'rhode island','virginia'];
+// console.log(travelArray);
+
+// var travelAnswer = prompt('QUICK! Where on my continent have I been too?! (hint: i am in love with north american states/provinces)');
+
+
+// function travelQuest() {
+
+//   if travelAnswer === travelArray[i].toLocaleLowerCase() {
+
+//     console.log(travelAnswer);
+//   }
+
+// }
+
+// travelQuest();
+
+
 
 
 // if answer === favFood[i].toLocaleLowerCase(); {
@@ -157,4 +194,9 @@ foodQuest();
 
 
 // console.log(userResults);
-// alert(userResults);
+/* alert userResults */
+
+alert('thank you for playing! Your final score is ' + score + '.');
+
+
+
